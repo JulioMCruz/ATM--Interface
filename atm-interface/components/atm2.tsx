@@ -203,14 +203,13 @@ const screenWithdrawMenu: Screen = {
     ],
 };
 
-
 export default function ATM2Component() {
 
     const [screen, setScreen] = useState<Screen>(screenDisconnected);
 
    const handleButtonClick = (action: number) => {
     console.log(action);
-    if (action === 18 || action === 38) {
+    if (action === 18 || action === 14 || action === 38) {
         setScreen(screenMainMenu);
     }
     if (action === 28) {
